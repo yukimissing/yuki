@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+.page {
+  background-image: url(../images/pexels-photo-907485.jpeg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: cover;
+  color: white;
+  font: 400 20px/1.2 "Caveat", sans-serif;
+}
+
+.content {
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 50px auto;
+  border-radius: 20px;
+  border: 15px solid lightcoral;
+  border-width: 10px;
+}
+
+.profile {
+  display: flex;
+  border-bottom: 7px solid lightcoral;
+  margin-bottom: 20px;
+}
+
+.profile__image {
+  width: 15%;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.profile__info {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile__title {
+  margin: 0;
+  font-size: 50px;
+}
+
+.profile__subtitle {
+  margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile__image {
+    width: 150px;
+  }
+
+  .profile__title {
+    text-align: center;
+  }
+
+  .profile__subtitle {
+    font-size: 25px;
+  }
+}
+
+.section {
+  border: 3px dashed lightcoral;
+  border-radius: 10px;
+  margin: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section__heading {
+  justify-content: space-between;
+  display: flex;
+}
+
+.section__title {
+  margin: 10px;
+}
+
+.section__button {
+  width: 15%;
+  background-color: transparent;
+  margin: 10px;
+  transition: opacity ease 0.3s;
+  border-radius: 10px;
+  border-color: lightcoral;
+  color: #fff;
+  font-size: 20px;
+}
+
+.section__button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.section__list {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  padding: 0;
+}
+
+.section__list-opened {
+  display: flex;
+}
+
+.section__list_item:nth-of-type(even) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+  width: 100%;
+}
+
+.section__list_item_title {
+  margin: 10px 45px 0;
+  font-size: 30px;
+}
+
+.section__list_image {
+  width: 45%;
+  border: 3px solid lightcoral;
+  border-radius: 10px;
+  margin: 10px 30px;
+}
+
+.section__list_image-anime {
+  width: 35%;
+  border: 3px solid lightcoral;
+  border-radius: 10px;
+  margin: 10px 30px;
+}
+
+.section__list_item_description {
+  width: 60%;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: sans-serif;
+  font-style: italic;
+  margin: 0 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .section {
+    margin: 10px;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* display: flex; */
+  padding: 0 19px;
+  display: none;
+}
+
+.modal_opened {
+  display: flex;
+}
+
+.modal__container {
+  background-color: pink;
+  margin: auto;
+  padding: 36px;
+  border: 3px solid lightcoral;
+  border-radius: 10px;
+  position: relative;
+  max-width: 358px;
+}
+
+.modal__close {
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/close.svg);
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: calc(100% + 5px);
+  bottom: calc(100% + 5px);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.modal__close:hover {
+  opacity: 60%;
+}
+
+.modal__heading {
+  color: #fff;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.modal__subheading {
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.modal__list {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+.modal__list_item {
+  display: flex;
+  align-items: center;
+}
+
+.modal__list_link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.modal__list_image {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.modal__list_text {
+  font-family: sans-serif;
+  margin: 8px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .modal__container {
+    padding: 22px 25px;
+    max-width: 282px;
+  }
+
+  .modal__close {
+    left: calc(100% - 26px);
+    bottom: calc(100% + 14px);
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.span-emerald {
+  font-weight: 600;
+  font-style: normal;
+  color: green;
+}
+
+.link__topaz {
+  font-style: normal;
+  color: red;
+}
+
+.yuumi {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 360px;
+  border: 3px solid lightcoral;
+  border-radius: 10px;
+}
+
+.close__button {
+  margin: 30px 42.5% 10px;
+}
+
+@media screen and (max-width: 1600px) {
+  .yuumi {
+    display: none;
+  }
+}
